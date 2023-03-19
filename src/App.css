@@ -1,3 +1,12 @@
+
+#root{
+  background-color: #424242;
+  height: 100vh;
+}
 .App {
   text-align: center;
+}
+
+.tab-bar .active {
+  color: red;
 }
