@@ -4,14 +4,8 @@ import Counter from "./components/Counter";
 import SearchForm from "./components/SearchForm";
 import GenreSelect from "./components/GenreSelect";
 
-function App() {
-  var temporaryStyles = {
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "column",
-    height: "10rem",
-  };
-  let handleSearchChange = (searchFrase) => {
+const App = () => {
+  const handleSearchChange = (searchFrase) => {
     console.log(searchFrase);
   };
   const handleGenreChange = (genre) => {
@@ -25,11 +19,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div style={temporaryStyles}>
           <Counter initialValue={0} />
           <SearchForm value="preset value" callback={handleSearchChange} />
           <GenreSelect genres={genres} selectedGenre={selectedGenre} onGenreChange={handleGenreChange} />
-        </div>
       </header>
     </div>
   );

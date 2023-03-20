@@ -14,11 +14,8 @@ const SearchForm = ({ callback, value }) => {
         type="text"
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") handleSubmit(e);
-        }}
       />
-      <button type="submit" onClick={handleSubmit}>
+      <button type="submit">
         SEARCH
       </button>
     </form>
